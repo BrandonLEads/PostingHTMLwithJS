@@ -11,19 +11,19 @@
    
 */
 /* Variables Setting the Date */
-var thisDate = new Date(2018, 9, 12);
-var dateString = thisDate.toLocaleDateString();
-var dateHTML = "<h2>" + dateString + "</h2>";
-var thisDay = thisDate.getDay();
+let thisDate = new Date(2018, 9, 12);
+let dateString = thisDate.toLocaleDateString();
+let dateHTML = "<h2>" + dateString + "</h2>";
+let thisDay = thisDate.getDay();
 
 /* Calling getEvent function to get the HTML for that day's events */
-var eventHTML = getEvent(thisDay);
+let eventHTML = getEvent(thisDay);
 
 /* Applying the page ID and content to the page */
 document.getElementById("unionToday").insertAdjacentHTML("beforeEnd", dateHTML + eventHTML);
 
 function getEvent(day) {
-   var eventHTML;
+   let eventHTML;
    switch (day) {
       case 0: // Sunday Events
       eventHTML = "<dl> \
